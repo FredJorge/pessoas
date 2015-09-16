@@ -8,7 +8,7 @@ public static Connection getConnection() throws Exception {
 if (con == null || con.isClosed()){
 Class.forName("com.mysql.jdbc.Driver");
 con = DriverManager.getConnection(
-"jdbc:mysql://localhost:3306/unibh","unibh", "1234");
+"jdbc:mysql://localhost:3306/unibh","root", "93176425");
 }
 return con;
 }
