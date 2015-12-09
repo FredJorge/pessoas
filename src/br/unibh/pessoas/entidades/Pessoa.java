@@ -2,43 +2,48 @@ package br.unibh.pessoas.entidades;
 
 public abstract class Pessoa {
 	
-	//Variveis de instância
-	
 	private Long id;
 	private String nome;
 	private String endereco;
 	private String telefone;
 	
-	//Construtores
+	//variaveis de instancia
+	//construtores
+	//get e set
 	
-	public Pessoa(){};
+	@Override
+	public String toString() {
+		return "Pessoa [id=" + id + ", nome=" + nome + ", endereco=" + endereco + ", telefone=" + telefone + "]";
+	}
 	
+	
+	public Pessoa() {
+		super();
+	}
+	
+	
+
 	public Pessoa(Long id, String nome) {
 		super();
 		this.id = id;
-		this.nome = nome;
 	}
-
+	
 	public Pessoa(Long id, String nome, String endereco, String telefone) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.endereco = endereco;
-		this.telefone = telefone;		
+		this.telefone = telefone;
 	}
 	
-	//Metodo toString
-	@Override
-	public String toString() {
-		return "Pessoa [id=" + id + ", nome=" + nome + ", endereco=" + endereco + ", telefone=" + telefone + "]";
-	}
-
+	
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
 	public String getNome() {
 		return nome;
 	}
@@ -57,4 +62,5 @@ public abstract class Pessoa {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+
 }
